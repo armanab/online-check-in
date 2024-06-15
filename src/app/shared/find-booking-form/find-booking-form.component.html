@@ -1,0 +1,62 @@
+<div class="wrapper curved bg-white">
+    <div>
+        <div class="font-24 page-title border-bottom px-1 py-2 mb-3">
+            {{'Online Check-In '}}
+        </div>
+        <div class="font-14 page-description fw-lighter px-2">
+            {{'You can check-in here '}}
+            <b>{{'starting 72 hours before departure. '}}</b>
+            {{'Please enter your information to begin the check-in process.'}}
+        </div>
+    </div>
+    <form action="" class="ng-pristine ng-invalid ng-touched">
+        <div class="row mt-4">
+            <div class="col-12 field-wrapper animated-label focused">
+                <label for="flightnumber" class="ellipsis">Booking
+                    reference (PNR)</label>
+                <input type="text" maxlength="13"
+                    class="custom-field w-100 curved bg-whitesmoke border px-3 latin uppercase ng-pristine ng-invalid ng-touched"
+                    id="find-id1" name="flightnumber" [(ngModel)]="model.pnr">
+
+            </div>
+        </div>
+        <div class="row my-3">
+            @if (true) {
+            <div class="font-15 ps-4 text-orange-i anim-kit overflow-hidden"
+                [ngClass]="testEnv ? 'h--35' : 'slide--up' ">** To test
+
+                <!-- h--35 -->
+                enter your lastname
+            </div>
+            }
+            <div class="col-12 field-wrapper animated-label focused"><label for="lastname" class="ellipsis">Last
+                    Name</label><input autocomplete="on" maxlength="30" enterkeyhint="go" type="text"
+                    class="custom-field w-100 curved bg-whitesmoke border px-3 latin uppercase ng-untouched ng-pristine ng-invalid"
+                    id="find-lastname" name="lastname" [(ngModel)]="model.lastName"><!----></div>
+        </div>
+
+        <div class="row my-3 disable-when-guide-active">
+            <div class="col-12 ps-4"><label class="cursor-pointer" for="find-isGuest">
+                    <input type="checkbox" tabindex="-1" [checked]="testEnv" (change)="onTestEnvironment()"
+                        class="custom-checkbox me-1 h--20 w--20 ng-valid ng-dirty ng-touched" id="find-isGuest"
+                        name="find-isGuest">
+                    Test environment </label>
+
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <button class="custom-button bg-orange-i text-white curved w-100 font-18 h--50 "
+                    [disabled]="!(model.lastName && model.pnr)"
+                     [ngClass]="!(model.lastName && model.pnr) ? 'opacity-50' : 'slide--up' "
+                     (click)="onCheckIn()"
+                     id="find-confirm">
+                    <span>Check In</span>
+                    <i class="fa fa-spin fa-circle-o-notch mx-2" hidden=""></i>
+                </button>
+            </div>
+
+        </div>
+    </form>
+</div>

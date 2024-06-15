@@ -1,0 +1,18 @@
+.field-wrapper.wrong-entry {
+    animation: shake .18s 4;
+    background-color: #ff0000bf !important;
+    color: #fff;
+}
+@keyframes shake {
+    0% {
+        transform: translate(3px);
+    }
+
+    50% {
+        transform: translate(-3px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}

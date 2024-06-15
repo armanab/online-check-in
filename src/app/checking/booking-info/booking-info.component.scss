@@ -1,0 +1,42 @@
+
+.pax {
+    .title {
+        width: 40px;
+        height: 40px;
+        line-height: 42px;
+        border-radius: 100%;
+    }
+}
+.pax.male .title {
+    background-color: var(--color1-opacity);
+    color: var(--color1);
+}
+.add-pax {
+    .icon {
+        margin-left: 2px;
+        line-height: 30px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .page-title {
+        text-align: left !important;
+        margin-bottom: 24px !important;
+        margin-top: 12px !important;
+    }
+    .add-pax {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        .icon {
+            line-height: 24px;
+        }
+    }
+
+    .passengers {
+        .title {
+            width: 36px;
+            height: 36px;
+            line-height: 38px;
+        }
+    }
+}

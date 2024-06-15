@@ -1,0 +1,124 @@
+<div class="seat-choosing"><!---->
+    <div>
+        <div class="d-md-none">
+            <div class="wrapper">
+                <div
+                    class="row-space-around choosing-guide font-12 mx-0 py-2 border-top border-bottom anim-kit text-white">
+                    <div>
+                        <div class="guide-icon bg-white me-2"></div>
+                        <div class="guide-text pt-1">Free Seat</div>
+                    </div>
+                    <div>
+                        <div class="guide-icon bg-light-warning me-2"></div>
+                        <div class="guide-text pt-1">None-free Seat</div>
+                    </div>
+                    <div class="nowrap">
+                        <div class="guide-icon bg-white me-2 opacity-50"></div>
+                        <div class="guide-text pt-1">Unavailable Seat</div>
+                    </div>
+                </div>
+                <div id="seatmap-wrapper" class="seatmap-wrapper aircraft-320 long">
+                    <div class="inner anim-kit text-white"><img src="seatmap/plane-head.png" class="plane-head"><img
+                            src="seatmap/plane-head-window.png" class="plane-head-window">
+                        <div class="plane-inside">
+                            <div class="inner">
+                                <app-seatmap>
+
+                                </app-seatmap>
+                                <!---->
+                            </div>
+                        </div><!----><!----><!----><img src="seatmap/plane-back-320.png" class="plane-back"><!----><img
+                            src="seatmap/plane-wing-320.png" class="plane-wing left"><!----><img
+                            src="seatmap/plane-wing-320.png" class="plane-wing right"><!---->
+                    </div>
+                </div>
+                <div class="page-footer d-md-none anim-kit backblur-box">
+                    <div id="passengers-scroll-wrapper"
+                        class="horizontal-scroll-wrapper py-2 px-4 border-bottom single-pax">
+                        <div class="pax px-2 d-inline-block text-blue-i fw-bold">
+                            <div class="row-space-center">
+                                <div class="me-3">
+                                    <div class="d-inline-block font-18 ms-2"> TEST AA </div>
+                                </div>
+                                <div class="font-26 pe-2"><span>--</span><span hidden=""><span class="latin">
+                                            <!----></span><!----></span></div>
+                                <!---->
+                            </div>
+                        </div><!----><!---->
+                    </div>
+
+                    <app-footer-buttons (back)="backToProhibited()" (submited)="continue()">
+                    </app-footer-buttons>
+                </div>
+            </div>
+
+        </div>
+        <div class="d-none d-md-block">
+            <div class="wrapper-desktop bg-blue-i">
+                <div class="sidebar-wrapper bg-white position-relative anim-kit">
+                    <div class="px-4">
+                        <div class="pax pb-3 border-bottom py-3 mb-3">
+                            <div class="row-space-between">
+                                <div>
+                                    <div
+                                        class="pax-seat m-2 d-inline-block curved bg-orange-i text-center text-white font-24 fw-lighter uppercase">
+                                        TA </div>
+                                    <div class="d-inline-block font-18 ms-2 text-blue-i"> TEST AA
+                                    </div>
+                                </div>
+                                <div class="text-blue-i font-30 fw-bold pe-2"><span>--</span><span hidden=""><span
+                                            class="latin"> <!----></span><!----></span></div>
+                                <!---->
+                            </div>
+                        </div><!---->
+                    </div><!---->
+                    <div class="page-footer position-absolute seatmap-footer anim-kit">
+
+                        <div class="row mx-0 pt-3 px-3 action-buttons">
+                            <div class="col-4 pe-0">
+                                <button (click)="backToProhibited()" class="custom-button disable-when-guide-active w-100 h--45 text-gray"><i
+                                        class="fa fa-angle-left font-24 me-2"></i></button>
+                            </div>
+                            <div class="col-8 ps-0">
+                                <button (click)="continue()"
+                                     class="custom-button w-100 h--45 text-white curved bg-orange-i opacity-50"> Continue
+                                    <i class="fa fa-angle-right font-24 ms-2"></i><i
+                                        class="fa fa-spin fa-circle-o-notch ms-2" hidden=""></i></button></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="seatmap-wrapper-desktop" class="seatmap-wrapper-desktop bg-blue-i anim-kit aircraft-320">
+                    <div class="choosing-guide font-12 mx-0 py-2 anim-kit text-white">
+                        <div>
+                            <div class="guide-icon bg-white me-2"></div>
+                            <div class="guide-text pt-1">Free Seat</div>
+                        </div>
+                        <div>
+                            <div class="guide-icon bg-light-warning me-2"></div>
+                            <div class="guide-text pt-1">None-free Seat</div>
+                        </div>
+                        <div>
+                            <div class="guide-icon bg-white me-2 opacity-50"></div>
+                            <div class="guide-text pt-1">Unavailable Seat</div>
+                        </div>
+                    </div>
+                    <div class="inner anim-kit text-white nowrap"><img src="seatmap/plane-head-desktop.png"
+                            class="plane-head"><img src="seatmap/plane-head-window-desktop.png"
+                            class="plane-head-window">
+                        <div class="plane-inside">
+                            <div class="inner">
+                                <app-seatmap>
+
+                                </app-seatmap>
+                                <!---->
+                            </div>
+                        </div><!----><!----><!----><img src="seatmap/plane-back-desktop-320.png"
+                            class="plane-back"><!----><img src="seatmap/plane-wing-desktop-320.png"
+                            class="plane-wing left"><!----><img src="seatmap/plane-wing-desktop-320.png"
+                            class="plane-wing right"><!---->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!---->
+</div>

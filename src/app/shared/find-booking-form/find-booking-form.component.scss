@@ -1,0 +1,28 @@
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        background-color: #f8f8f8 !important;
+        box-shadow: none !important;
+        padding: 2rem 3rem !important;
+        form {
+            max-width: 360px !important;
+            margin: auto;
+            margin-top: 3rem !important;
+            input {
+                background-color: #fff !important;
+            }
+        }
+    }
+}
+
+.wrapper {
+    box-shadow: 0 0 30px #0000001f;
+    padding: 2rem;
+    .page-description {
+        line-height: 15px;
+    }
+    .custom-checkbox {
+        accent-color: var(--color2);
+        position: relative;
+        top: 5px;
+    }
+}
